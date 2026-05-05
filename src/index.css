@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar for dark mode */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Task card hover effects */
+.task-card {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.task-card:hover {
+  @apply shadow-lg;
+}
+
+/* Priority indicators */
+.priority-high {
+  @apply border-l-4 border-red-500;
+}
+
+.priority-medium {
+  @apply border-l-4 border-yellow-500;
+}
+
+.priority-low {
+  @apply border-l-4 border-green-500;
+}
+
+/* Drag and drop styles */
+.dragging {
+  @apply opacity-50 shadow-2xl;
+}
